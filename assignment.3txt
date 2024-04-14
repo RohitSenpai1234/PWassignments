@@ -1,0 +1,223 @@
+//LOOP 1 QUESTIONS AND ANSWER.
+
+Q1.Print all the odd numbers from 1 to 100.
+ans:#include<iostream>
+using namespace std;
+int main(){
+    cout<<"enter a number :";
+    for(int i=1; i<=100; i += 2){
+        cout<<i<<endl;
+    }
+}
+Q2.Print all numbers from 1 to 100 that are divisible by 3.
+ans:#include<iostream>
+using namespace std;
+int main(){
+    cout<<"enter a number:";
+    for(int i=3; i<=100; i +=3){
+        cout<<i<<endl;
+    }
+}
+Q3.Print the table of ‘n’. Here ‘n’ is an integer which the user will input.
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a number:";
+    cin>>n;
+    
+    for(int i=1; i<=10; i++){
+        
+        cout<<n*i<<" "<<endl;
+    }
+}
+
+Q4.Display this AP - 4,7,10,13,16.. upto ‘n’ terms.
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a number:";
+    cin>>n;
+    int a=1;
+    for(int i=1; i<=n; i++){
+        cout<<a<<endl;
+        a = a+3;
+    }
+}
+
+Q5. Display this GP - 3,12,48,.. upto ‘n’ terms.
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a number:";
+    cin>>n;
+    int a=1;
+    for(int i=1; i<=n; i++){
+        a = a*2;
+        cout<<a<<endl;
+    }
+}
+
+Q6. Write a program to print all the ASCII values and their equivalent characters of 26 alphabets using a while
+loop.
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a number:";
+    cin>>n;
+    int i =0;
+    while (i<26){
+        cout<<"ascii value of "<<(char)(i + 'A')<<" is "<<(int)(i + 'A')<<endl;
+        i++;
+    }    
+}
+//LOOP 2 QUESTIONS AND ANSWER.//
+
+Q1. Predict the output
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+while ('1' < '2')
+cout << "In while loop" << endl;
+}
+ANS:in while loop will run ab to infinite.
+
+Q2. Predict the output
+#include <bits/stdc++.h>
+using namespace std;
+int main( ) {
+int t = 10;
+while (t /= 2) {
+cout << "Hello" << endl;
+}
+}
+ans:Hello will run 3 times.
+
+Q3. Predict the output
+#include <bits/stdc++.h>
+using namespace std;
+int main( ) {
+for (int x = 1; x * x <= 10; x++)
+cout << "In for loop" << endl;
+}
+ans:in for loop will run 3 times.
+
+Q4. Predict the output
+#include <bits/stdc++.h>
+using namespace std;
+int main( ) {
+int x = 10, y = 0 ;
+while ( x >= y ) {
+x-- ;
+y++ ;
+cout << x << " " << y << endl ;
+}
+}
+ans:9 1
+8 2
+7 3
+6 4
+5 5
+4 6
+Q5. WAP to print the sum of all the even digits of a given number.
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a number :";
+    cin>>n;
+    int lastdigit = 0;
+    int sum = 0;
+    while(n>0){
+        lastdigit = n%10;
+        sum += lastdigit;
+        n /=10;
+    }
+    cout<<sum;       
+}
+Q6. WAP to print the sum of a given number and its reverse.
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a number:";
+    cin>>n;
+     int lastdigit =0;
+    int reverse =0;
+    while(n>0){
+        reverse *=10;
+        lastdigit =n%10;
+        reverse +=lastdigit;
+        n/=10;
+    }
+    cout<<reverse;
+}
+Q7. Print the factorials of first ‘n’ numbers
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a number:";
+    cin>>n;
+    int product =1;
+    for(int i=1; i<=1; i++){
+        product *= 1;
+    }
+    cout<<product;
+}
+
+Q8. Print first ‘n’ fibonacci numbers.
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a number :";
+    cin>>n;
+    int a=1;
+    int b=1;
+    int sum=0;
+    for(int i=0; i<=1; i++){
+        sum = a+b;
+        a = b;
+        b = sum;
+        cout<<sum;
+    }  
+}
+Q9. Write a program to print out all Armstrong numbers between 1 and 500. If the sum of cubes of
+each digit of the number is equal to the number itself, then the number is called an Armstrong
+number. For example, 153 = ( 1 * 1 * 1 ) + ( 5 * 5 * 5 ) + ( 3 * 3 * 3 )
+ans: #include <iostream>
+using namespace std;
+
+
+void isArm(int num)
+{
+    int temp=num;
+    int sum=0,dig=0;
+    while(num>0)
+    {
+        dig=num%10;
+        sum+=pow(dig,3);
+        num=num/10;
+    }
+    if(temp==sum)
+    cout<<temp<<endl;
+}
+
+int main() {
+
+    for(int i=1;i<500;i++)
+    {
+        while(i<10 && i>1)
+        {
+            cout<<i<<endl;
+            break;
+        }
+        isArm(i);
+    }
+
+    return 0;
+}
