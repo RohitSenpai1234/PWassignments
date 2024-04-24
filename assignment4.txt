@@ -1,0 +1,455 @@
+Q1. Print the following pattern
+1 1 1 1
+2 2 2 2
+3 3 3 3
+4 4 4 4
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a rows:";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n; j++){
+            cout<<i;
+        }
+        cout<<endl;
+    }
+}
+
+Q2. Print the following pattern
+Input: n = 4
+Output:
+1 2 3 4
+1 2 3
+1 2
+1
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a rows:";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n+1-i; j++){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+}
+Q3. Print the following pattern
+Input: n = 4
+Output:
+A
+A B
+A B C
+A B C D
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a rows:";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<char(j+64);
+        }
+        cout<<endl;
+    }
+}
+Q4. Print the following pattern
+Input: n = 4
+Output:
+1
+A B
+1 2 3
+A B C D
+1 2 3 4 5
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a rows:";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        if(i%2==1)
+        for(int j=1; j<=i; j++){
+            cout<<j;
+        }
+        else{
+            for(int j=1; j<=i; j++){
+                cout<<char(j+64);
+            }
+        }
+        cout<<endl;
+    }
+}
+Q5. Print the following pattern
+Input n = 4
+Output:
+*
+**
+***
+****
+***
+**
+*
+ams:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a rows:";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    for(int i=1; i<=n-1; i++){
+        for(int j=1; j<=n-i-1; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+Q6. Print the following pattern
+Sample Input : m = 4, n = 6
+Sample Output :
+******
+* *
+* *
+******
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int m,n;
+    cout<<"rnter a rows:";
+    cin>>m>>n;
+    for(int i=1; i<m; i++){
+        for(int j=1; j<n; j++){
+            if(i==0 || j==0 || i==m-1 || j==n-1){
+                cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+Q7. Print the following pattern
+Sample Input : n = 4
+Output :
+****
+****
+****
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a row:";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n-i-1; j++){
+            cout<<" ";
+        }
+        for(int k=1; k<n; k++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+Q8. Print the following pattern
+Sample Input : n= 4
+Output :
+1
+1 2
+1 2 3
+1 2 3 4
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a row:";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+}
+Q9. Print the following pattern
+Input : n = 4
+Output :
+A
+A B
+A B C
+A B C D
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a row:";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n-i-1; j++){
+            cout<<" ";
+        }
+        for(int k=1; k<=i; k++){
+            cout<<char(k+64);
+        }
+        cout<<endl;
+    }
+}
+Q10. Print the following pattern
+Input: n = 4
+Output:
+1
+2 1
+3 2 1
+4 3 2 1
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a row:";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+}
+//LOOP 2 QUESTIONS AND ANSWER://
+Q1. Print the following pattern
+Input : n = 5
+Output :
+1
+1 2 3
+1 2 3 4 5
+1 2 3 4 5 6 7
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a row:";
+    cin>>n;
+    for(int i=0; i<=n; i++){
+        for(int j=0; j<n-i-1; j++){
+            cout<<" ";
+        }
+        for(int k=0; k<2*i+1; k++){
+            cout<<k+1<<" ";
+
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+Q2. Print the following pattern
+Input : n = 4
+Output :
+A
+A B C
+A B C D E
+A B C D E F G
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter no.rows:";
+    cin>>n;
+    for(int i=0; i<=n; i++){
+        for(int j=0; j<=n-i-1; j++){
+            cout<<" ";
+        }
+        for(int j=0; j<+2*i+1; j++){
+            cout<<(char)('A' + j )<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+Q3. Print the following pattern
+Input : n = 4
+Output :
+A
+B A B
+C B A B C
+D C B A B C D
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter no. rows:";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n-i; j++){
+            cout<<" ";
+        }
+        for(int j=i-1; j>=0; j--){
+            cout<<(char)('A' + j)<<" ";
+        }
+        for(int j=1; j<i; j++){
+            cout<<(char)('A'+ j)<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+Q4. Print the following pattern
+Input : n = 4
+Output :
+A B C D E F G
+A B C E F G
+A B F G
+A G
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter no.of lines:";
+    cin>>n;
+    for(int i=1; i<2*n-1; i++){
+        cout<<(char)('A' + i)<< " ";
+    }
+    cout<<endl;
+    for(int i =1; i<=n; i++){
+        for(int j=0; j<=n-i; j++){
+            cout<<(char)('A' + j)<< " ";
+        }
+        for(int j=0; j<=2*i-1;j++){
+            cout<<" ";
+        }
+        for(int j=0; j<=n-i; j++){
+            cout<<(char)('A'+n+i+j-1)<<" ";
+        }
+        cout<<endl;
+    }
+}
+Q6. Print the following pattern
+Input : n = 4
+Output :
+* *
+* *
+* *
+* *
+*
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter a rows:";
+    cin>>n;
+    for(int i=0; i<n-1; i++){
+        for(int j=0; j<i; j++){
+            cout<<" ";
+        }
+        cout<<"*";
+        int m =2*(n-i-1);
+        for(int j=0; j<=m-1; j++){
+            cout<<" ";
+
+        }
+        cout<<"*"<<endl;
+    }
+    for(int i=0; i<n-1; i++){
+        cout<<" ";
+    }
+}
+Q7. Print the following pattern
+Input : m = 4, n = 6
+Output :
+*
+* *
+* *
+* *
+* *
+* *
+*
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int i=0; i<n; i++){
+        cout<<" ";
+    }
+    cout<<"*"<<endl;
+    for(int i=0; i<=n; i++){
+        for(int j=0; j<=n-i; j++){
+            cout<<" ";
+        }
+        cout<<"*";
+        int m=2*i-1;
+        for(int j=0; j< m; j++){
+            cout<<" ";
+        }
+    }   
+}
+Q8. Print the following pattern
+Input : n = 4
+Output :
+1
+2 2
+3 3
+4 4
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        cout<<" ";
+    }
+    cout<< 1 <<endl;
+    for(int i=1; i<=n; i++){
+        for(int j=0; j<n-i; j++){
+            cout<<" ";
+        }
+        cout<<i;
+        for(int j=0; j<2*i-1; j++){
+            cout<<" ";
+        }
+        cout<< i <<endl;
+    }
+    return 0;
+}
+Q9. Print the following pattern
+Input : n = 5
+Output :
+*
+* * *
+* * *
+* * *
+* * *
+***********
+* * *
+* * *
+* * *
+* * *
+*
+ans:#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int i=0; i<n; i++){
+        cout <<" ";  
+    }
+    cout << "*" << endl;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<n-i; j++){
+            cout<<" ";
+        }
+        cout << "*";
+        int m = 2 * i-1;
+        for(int j=0; j<m; j++){
+            cout <<" ";
+        }
+    }
+}
